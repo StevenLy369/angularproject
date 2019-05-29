@@ -1,26 +1,40 @@
+.form {
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    left: 23%;
+    height: 75vh;
+    border-radius: 3%;
+}
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 25%;
    }
    
    input {
-    height: 40px;
+    height: 25px;
     width: 500px;
     border-radius: 5px;
     align-items: stretch;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     transform: translateX(400px);
     background-color: yellow;
+    position: relative;
+    right: 315px;
    
    }
    
    label {
     display: flex;
     justify-content: center;
-    font-size: 80px;
-    color: blue;
+    font-size: 25px;
+    color:white;
    
    }
    
@@ -28,4 +42,29 @@ form {
     height: 50px;
     width: 10%;
     transform: translateX(600px);
+    position: relative;
+    right: 300px;
+    background: white;
+    color: blue;
+    border: 2px solid yellow;
+    border-radius: 20%;
+    margin-bottom: 1%;
+   }
+
+   h1 {
+    margin-bottom: -1%;
+    position: relative;
+    left: 40%;
+    color: white;
+    font-size: 40px;
+   }
+
+   p {
+    position: relative;
+    left: 41%;
+    color: white;
+   }
+
+   .title {
+       margin-top: -2%
    }

@@ -1,14 +1,14 @@
 body {
-    background: url(stan.jpg.jpg);
+    background: url(randy.jpg.jpg);
     background-size: 250px;
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
  }
 
-
-.navHead{
+ .navHead{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +21,12 @@ body {
     justify-content: flex-end;
     width: 100%;
     border-radius: 10px;
+    background-color: blue;
+    color: yellow;
+    font: 50px;
+    font-weight:  bold;
+    /* transform: translateX(1050px); */
+ 
  
  }
  
@@ -34,4 +40,23 @@ body {
     display: flex;
     flex-direction: row;
     width: 300px;
+ }
+ 
+ .routerNav {
+    transform: translateY(-40px);
+    background-color: blue;
+    color: yellow;
+    font: 50px;
+    font-weight: bold;
+    width: 25%;
+    transform: translateY(-34px);
+ 
+ }
+ 
+ .routerNav > a {
+ 
+   color: yellow;
+   text-decoration: none;
+   margin: 15px;
+ 
  }

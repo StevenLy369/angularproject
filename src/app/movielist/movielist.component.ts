@@ -23,4 +23,11 @@ export class MovielistComponent implements OnInit {
     this.apiService.addFavs(newFav);
   }
 
+  showMovie(index): void{
+    this.movieList[index].show = true;
+  }
+  
+  closeMovie(index){
+    this.movieList[index].show = false;
+  }
 }

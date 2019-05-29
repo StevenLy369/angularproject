@@ -1,25 +1,29 @@
  <!-- <button (click)="searchImdb()">Search</button> -->
-<div>
+ <div class="title">
+ <h1>Blockbuster</h1>
+ <p>(...because it's come to this)</p>
+</div>
+<div class="form">
  <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
-  <label for="">Which Sub?</label>
+  <label for="">Search by Title</label>
   <input type="text" ngModel name="searchResult">
   <button>Search</button>
 </form> 
 
 <form #genreForm="ngForm" (ngSubmit)="searchGenre(genreForm)">
-  <label for="">Which Genre</label>
+  <label for="">Search by Genre</label>
   <input type="text" ngModel name="genreResult">
   <button>Search</button>
  </form>
 
  <form #ratingForm="ngForm" (ngSubmit)="searchRating(ratingForm)">
-  <label for="">Rating</label>
+  <label for="">Search by Rating</label>
   <input type="text" ngModel name="ratingResult">
   <button>Search</button>
  </form>
 
  <form #yearForm="ngForm" (ngSubmit)="searchYear(yearForm)">
-  <label for="">Year</label>
+  <label for="">Search by Year</label>
   <input type="text" ngModel name="yearResult">
   <button>Search</button>
  </form>

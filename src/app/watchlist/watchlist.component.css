@@ -1,0 +1,42 @@
+.listcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 600px;
+    width: 1500px;
+    flex-wrap: wrap;
+ }
+ 
+ .movieobject{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    flex-direction: column;
+ 
+ }
+ 
+ img{
+    width: 350px;
+    height: 350px;
+ 
+ }
+ 
+ .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .movieDiv{
+    background-color: rgba(2, 17, 44, 0.87);
+    border-radius: 10px;
+    height: 2000px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 20;
+    position: relative;
+    border: 10px solid yellow;
+    color: white;
+    font-size: 20px;
+  }

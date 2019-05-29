@@ -1,7 +1,20 @@
 <p>Watch list</p>
 
-<div *ngFor="let fav of favList; index as i">
+<!-- <div *ngFor="let fav of favList; index as i">
   <p>Title: {{ fav.title }}</p>
   <img src="https://image.tmdb.org/t/p/w500/{{ fav.poster_path }}" alt="">
 
-</div>
+</div> -->
+
+<section class="listcontainer">
+    <div *ngFor ="let fav of favList; index as i">
+      <div class="movieobject">
+        <div *ngIf="fav.show" class="movieDiv">
+      <p>Title: {{ fav.title }}</p>
+       <p>Description: {{ fav.overview }} </p>
+      <img src="https://image.tmdb.org/t/p/w500/{{ fav.poster_path }}" alt="Image Not Found" (click)="closeMovie(i)">
+    </div>
+      <img src="https://image.tmdb.org/t/p/w500/{{ fav.poster_path }}" alt="Image Not Found" (click)="showMovie(i)" *ngIf="!fav.show">
+    </div>
+    </div>
+    </section>

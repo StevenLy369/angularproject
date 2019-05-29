@@ -17,10 +17,13 @@
 <section class="listcontainer">
 <div *ngFor ="let movie of movieList; index as i">
   <div class="movieobject">
+    <div *ngIf="movie.show" class="movieDiv">
   <p>Title: {{ movie.title }}</p>
    <p>Description: {{ movie.overview }} </p>
-  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
-  <span (click)="addFavs(movie)">X</span>
+  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Image Not Found" (click)="closeMovie(i)">
+</div>
+  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Image Not Found" (click)="showMovie(i)" *ngIf="!movie.show">
+  <img class="favIcon" src="https://listimg.pinclipart.com/picdir/s/159-1590149_301-moved-permanently-shipping-tape-with-company-logo.png" (click)="addFavs(movie)">
 </div>
 </div>
 </section>

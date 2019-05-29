@@ -17,6 +17,13 @@ export class WatchlistComponent implements OnInit {
     this.favList = this.apiService.getFavList();
     console.log(this.favList);
   }
+  showMovie(index): void{
+    this.favList[index].show = true;
+  }
+  
+  closeMovie(index){
+    this.favList[index].show = false;
+  }
 
 
 }
