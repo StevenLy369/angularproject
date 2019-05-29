@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+ <!-- <button (click)="searchImdb()">Search</button> -->
+<div>
+>>>>>>> master
  <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
   <label for="">Which Movie?</label>
   <input type="text" ngModel name="searchResult">
@@ -9,7 +14,38 @@
   <label for="">Which Genre</label>
   <input type="text" ngModel name="genreResult">
   <button>Search</button>
+<<<<<<< HEAD
 </form> 
+=======
+ </form>
+
+ <form #ratingForm="ngForm" (ngSubmit)="searchRating(ratingForm)">
+  <label for="">Rating</label>
+  <input type="text" ngModel name="ratingResult">
+  <button>Search</button>
+ </form>
+
+ <form #yearForm="ngForm" (ngSubmit)="searchYear(yearForm)">
+  <label for="">Year</label>
+  <input type="text" ngModel name="yearResult">
+  <button>Search</button>
+ </form>
+</div>
+
+<!-- <a routerLink="/watchlist" routerLinkActive="active">Favorites</a>
+<router-outlet></router-outlet> -->
+
+ 
+  <!-- <div *ngFor ="let movie of movieList; index as i">
+  <p>Title: {{ movie.title }}</p>
+   <p>Description: {{ movie.overview }} </p>
+  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+  <span (click)="addFavs(movie)">X</span>
+
+</div> -->
+
+<!-- <movielist></movielist> -->
+>>>>>>> master
 
 
 

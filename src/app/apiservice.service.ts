@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from "@angular/router";
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 
 @Injectable({
@@ -8,6 +12,7 @@ import { Router } from "@angular/router";
 })
 export class ApiserviceService {
   apikey: string = "f28aaf44cf6e1d7966838d2e0379f41b";
+<<<<<<< HEAD
   movieList: any[] = [];
   favList: any[] = [];
  
@@ -20,16 +25,26 @@ export class ApiserviceService {
  
 
   constructor(private http: HttpClient, private router: Router ) { }
+=======
+  movieList: any[] = []
+  favList: any[] = []
+
+  constructor(private http: HttpClient, private router: Router) { }
+>>>>>>> master
 
   getImdbData(searchResult:string){
     this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apikey}&query=${searchResult}`).subscribe(response => {
       console.log(response);
       this.movieList = response["results"];  
       this.router.navigate(["/movielist"]);
+<<<<<<< HEAD
       
 
 
     });
+=======
+    });;
+>>>>>>> master
   }
 
   getImdbGenre(genreResult:string, genreId:number, genreList){
@@ -137,6 +152,7 @@ export class ApiserviceService {
     return this.favList;
   }
 
+<<<<<<< HEAD
   // getGenreList(){
   //   return this.genreList;
   // }
@@ -145,11 +161,122 @@ export class ApiserviceService {
     this.favList.push(newFav);
     console.log(this.favList);
     return this.favList;
+=======
+  getImdbGenre(genreResult:string){
+    let genreID: number;
+    // loop through genreList to find the id...assign it to genreID.
+      let genreList: any[] = [
+        {
+          id: 28,
+          name: "Action"
+        },
+        {
+          id: 12,
+          "name": "Adventure"
+        },
+        {
+          id: 16,
+          "name": "Animation"
+        },
+        {
+          id: 35,
+          "name": "Comedy"
+        },
+        {
+          id: 80,
+          "name": "Crime"
+        },
+        {
+          id: 99,
+          "name": "Documentary"
+        },
+        {
+          id: 18,
+          "name": "Drama"
+        },
+        {
+          id: 10751,
+          "name": "Family"
+        },
+        {
+          id: 14,
+          "name": "Fantasy"
+        },
+        {
+          id: 36,
+          "name": "History"
+        },
+        {
+          id: 27,
+          "name": "Horror"
+        },
+        {
+          id: 10402,
+          "name": "Music"
+        },
+        {
+          id: 9648,
+          "name": "Mystery"
+        },
+        {
+          id: 10749,
+          "name": "Romance"
+        },
+        {
+          id: 878,
+          "name": "Science Fiction"
+        },
+        {
+          id: 10770,
+          "name": "TV Movie"
+        },
+        {
+          id: 53,
+          "name": "Thriller"
+        },
+        {
+          id: 10752,
+          "name": "War"
+        },
+        {
+          id: 37,
+          "name": "Western"
+        }
+      ];
+      for (let i = 0; i < genreList.length; i++) {
+        if (genreResult === genreList[i].name.toLowerCase()) {
+          genreID = genreList[i].id
+          break;
+        }
+      }
+    this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=${this.apikey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreID}`).subscribe(response => {
+      console.log(response);
+      this.movieList = response["results"];
+      this.router.navigate(["/movielist"]);
+    })
+>>>>>>> master
   }
 
+  getImdbRating(ratingResult: string) {
+    this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=f28aaf44cf6e1d7966838d2e0379f41b&language=en-US&certification_country=US&certification=${ratingResult}&include_adult=false&include_video=false&page=1`).subscribe(response => {
+      console.log(response);
+      this.movieList = response["results"];  
+      this.router.navigate(["/movielist"]);
+    });;
+  }
 
-  getFavs(): any[] {
-    // console.log("Returning the favorites array...");
+  getImdbYear(yearResult: string) {
+    this.http.get(`https://api.themoviedb.org/3/discover/movie?api_key=f28aaf44cf6e1d7966838d2e0379f41b&language=en-US&include_adult=false&include_video=false&page=1&primary_release_year=${yearResult}`).subscribe(response => {
+      console.log(response);
+      this.movieList = response["results"];  
+      this.router.navigate(["/movielist"]);
+    });;
+  }
+  
+
+  addFavs(newFav): any[] {
+    this.favList.push(newFav);
+    console.log(this.favList);
     return this.favList;
   }
 

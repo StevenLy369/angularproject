@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header class="navHead">
   <a class="navbar">
     <a class="navlink">Sign In</a>
@@ -22,11 +23,32 @@
 </header> -->
 <main>
 <section class = "search">
+=======
+<!-- 
+<div *ngFor ="let movie of movieList">
+  <p>Title: {{ results.title}} </p>
+  
+
+</div> -->
+
+<!-- 
+
+ <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
+  <label for="">Which Sub?</label>
+  <input type="text" ngModel name="searchResult">
+  <button>Search</button>
+</form> -->
+
+<!-- <searchcriteria></searchcriteria> -->
+<section class="listcontainer">
+>>>>>>> master
 <div *ngFor ="let movie of movieList; index as i">
+  <div class="movieobject">
   <p>Title: {{ movie.title }}</p>
    <p>Description: {{ movie.overview }} </p>
   <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
   <span (click)="addFavs(movie)">X</span>
+<<<<<<< HEAD
 
 </div>
 
@@ -38,3 +60,8 @@
 
 
 
+=======
+</div>
+</div>
+</section>
+>>>>>>> master

@@ -5,8 +5,7 @@ import { ApiserviceService } from "../apiservice.service";
 @Component({
   selector: 'watchlist',
   templateUrl: './watchlist.component.html',
-  styleUrls: ['./watchlist.component.css'],
-  providers: [ ApiserviceService ]
+  styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
   favList: any[];

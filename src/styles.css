@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body {
     background: linear-gradient(rgba(201, 189, 189, 0.45), rgb(0, 0, 0)), url(stan.jpg);
+=======
+body {
+    background: url(stan.jpg.jpg);
+>>>>>>> master
     background-size: 250px;
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
  }
+<<<<<<< HEAD
  
  
  .sidebar{
@@ -33,6 +39,11 @@ body {
  }
  
  .navHead{
+=======
+
+
+.navHead{
+>>>>>>> master
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +65,11 @@ body {
  
  }
  
+<<<<<<< HEAD
  h3 {
+=======
+ h3{
+>>>>>>> master
     display: flex;
     flex-direction: row;
     width: 300px;
