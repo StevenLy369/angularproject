@@ -25,13 +25,6 @@ export class SearchcriteriaComponent implements OnInit {
     this.apiService.getImdbData(form.value.searchResult);
   }
 
-<<<<<<< HEAD
-  searchGenre(form){
-
-    this.apiService.getImdbGenre(form.value.genreResult);
-  }
-
-=======
   searchGenre(form) {
     this.apiService.getImdbGenre(form.value.genreResult);
   }
@@ -43,7 +36,6 @@ export class SearchcriteriaComponent implements OnInit {
   searchYear(form) {
     this.apiService.getImdbYear(form.value.yearResult);
   }
->>>>>>> master
 
   // addFavs(newFav) {
   //   console.log(newFav);
