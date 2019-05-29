@@ -19,8 +19,16 @@ export class SearchcriteriaComponent implements OnInit {
   }
     searchImdb(form){
 
+      
+
     this.apiService.getImdbData(form.value.searchResult);
   }
+
+  searchGenre(form){
+
+    this.apiService.getImdbGenre(form.value.genreResult);
+  }
+
 
   // addFavs(newFav) {
   //   console.log(newFav);

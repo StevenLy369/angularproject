@@ -1,19 +1,27 @@
-<!-- 
-<div *ngFor ="let movie of movieList">
-  <p>Title: {{ results.title}} </p>
-  
-
-</div> -->
-
-<!-- 
-
- <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
-  <label for="">Which Sub?</label>
-  <input type="text" ngModel name="searchResult">
-  <button>Search</button>
-</form> -->
-
-<!-- <searchcriteria></searchcriteria> -->
+<header class="navHead">
+  <nav class="navbar">
+    <a class="navlink">Sign In</a>
+    <a class="navlink">Create Account</a>
+    <a class="navlink">Find a Theater</a>
+  </nav>
+  </header>
+<!-- <header class="sideHead">
+<nav class="sidebar">
+  <a class="sidelink" href="">Action</a>
+  <a class="sidelink"href="">Adventure</a>
+  <a class="sidelink"href="">Comedy</a>
+  <a class="sidelink"href="">Sci-Fi</a>
+  <a class="sidelink"href="">Family</a>
+  <a class="sidelink"href="">Animated</a>
+  <a class="sidelink"href="">Fantasy</a>
+  <a class="sidelink"href="">Anime</a>
+  <a class="sidelink"href="">Now in Theaters</a>
+  <a class="sidelink"href="">Crime</a>
+  <a class="sidelink"href="">Old</a>
+</nav>
+</header> -->
+<main>
+<section class = "search">
 <div *ngFor ="let movie of movieList; index as i">
   <p>Title: {{ movie.title }}</p>
    <p>Description: {{ movie.overview }} </p>
@@ -21,3 +29,12 @@
   <span (click)="addFavs(movie)">X</span>
 
 </div>
+
+
+
+
+</section>
+</main>
+
+
+

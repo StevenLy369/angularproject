@@ -1,24 +1,15 @@
- <!-- <button (click)="searchImdb()">Search</button> -->
 
  <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
-  <label for="">Which Sub?</label>
+  <label for="">Which Movie?</label>
   <input type="text" ngModel name="searchResult">
   <button>Search</button>
 </form> 
 
-<!-- <a routerLink="/watchlist" routerLinkActive="active">Favorites</a>
-<router-outlet></router-outlet> -->
-
- 
-  <!-- <div *ngFor ="let movie of movieList; index as i">
-  <p>Title: {{ movie.title }}</p>
-   <p>Description: {{ movie.overview }} </p>
-  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
-  <span (click)="addFavs(movie)">X</span>
-
-</div> -->
-
-<!-- <movielist></movielist> -->
+<form #genreForm="ngForm" (ngSubmit)="searchGenre(genreForm)">
+  <label for="">Which Genre</label>
+  <input type="text" ngModel name="genreResult">
+  <button>Search</button>
+</form> 
 
 
 
