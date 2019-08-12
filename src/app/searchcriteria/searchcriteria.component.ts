@@ -26,7 +26,8 @@ export class SearchcriteriaComponent implements OnInit {
   }
 
   searchGenre(form) {
-    this.apiService.getImdbGenre(form.value.genreResult);
+    this.apiService.getImdbGenre(form.value.genreResult.toLowerCase());
+    console.log(form.value.genreResult.toLowerCase());
   }
 
   searchRating(form) {
