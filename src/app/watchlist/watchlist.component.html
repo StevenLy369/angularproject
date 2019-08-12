@@ -1,6 +1,20 @@
-<p>Watch list</p>
-
-<div *ngFor="let fav of favList; index as i">
-  <p>Title: {{ fav.title }}</p>
-  <img src="https://image.tmdb.org/t/p/w500/{{ fav.poster_path }}" alt="" />
+<div class="favorite-header">
+  <h1>Watch list</h1>
 </div>
+
+<section class="watch-container">
+  <div *ngFor="let fav of favList; index as i">
+    <div class="favorite">
+      <div class="favorite-top">
+        <img src="https://image.tmdb.org/t/p/w500/{{ fav.poster_path }}" alt="{{ fav.title }}" />
+      </div>
+      <div class="favorite-bottom">
+        <h2>{{ fav.title }}</h2>
+        <div class="fav">
+            <span id="fav-l">Category</span>
+            <span id="fav-r">Year</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

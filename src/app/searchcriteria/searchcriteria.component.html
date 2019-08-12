@@ -1,25 +1,25 @@
-<div>
+<div class="search-form">
    <form #imdbForm="ngForm" (ngSubmit)="searchImdb(imdbForm)">
-    <label for="">Which Movie?</label>
-    <input type="text" ngModel name="searchResult">
+    <label for="searchResult"><h2>Which Movie?</h2></label>
+    <input type="text" ngModel name="searchResult"><br><br>
     <button>Search</button>
   </form> 
 
-<form #genreForm="ngForm" (ngSubmit)="searchGenre(genreForm)">
-  <label for="">Which Genre</label>
-  <input type="text" ngModel name="genreResult">
+  <form #genreForm="ngForm" (ngSubmit)="searchGenre(genreForm)">
+  <label for="genreResult"><h2>Which Genre</h2></label>
+  <input type="text" ngModel name="genreResult"><br><br>
   <button>Search</button>
  </form>
 
  <form #ratingForm="ngForm" (ngSubmit)="searchRating(ratingForm)">
-  <label for="">Rating</label>
-  <input type="text" ngModel name="ratingResult">
+  <label for="ratingResult"><h2>Rating</h2></label>
+  <input type="text" ngModel name="ratingResult"><br><br>
   <button>Search</button>
  </form>
 
  <form #yearForm="ngForm" (ngSubmit)="searchYear(yearForm)">
-  <label for="">Year</label>
-  <input type="text" ngModel name="yearResult">
+  <label for="yearResult"><h2>Year</h2></label>
+  <input type="text" ngModel name="yearResult"><br><br>
   <button>Search</button>
  </form>
 </div>
